@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export default function Footer() {
   const companyLinks = [
     {
-      title: "About US",
+      title: "About Us",
       link: "/about",
     },
     {
@@ -22,7 +22,7 @@ export default function Footer() {
 
   const legalLinks = [
     {
-      title: "Terms add Conditions",
+      title: "Terms and Conditions",
       link: "/terms",
     },
     {
@@ -31,7 +31,7 @@ export default function Footer() {
     },
   ];
   return (
-    <footer className="bg-[#000000]  text-white py-[55px]  pl-[62px]">
+    <footer className="bg-[#000000]  text-white py-[55px] pl-[62px] md:px-[80px] md:py-[78px]">
       <section className="flex flex-col gap-5">
         <figure>
           <img
@@ -43,7 +43,7 @@ export default function Footer() {
           />
         </figure>
         {/* LINKS */}
-        <div className="flex flex-col gap-[46px]">
+        <div className="flex flex-col gap-[46px]  md:flex md:flex-row md:justify-between">
           <div>
             <h4 className="text-[18px] font-medium leading-[23.81px] font-red">
               StudioPerks
