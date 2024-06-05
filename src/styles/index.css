@@ -24,8 +24,9 @@ body {
 
 .hero {
   scroll-behavior: auto;
-  /* overflow-x: hidden; */
-  background-size: 100%;
+  overflow-x: hidden;
+  background-size: cover;
+  overflow-y: scroll;
   background-image: url("/images/hero.png");
   background-repeat: no-repeat;
   background-position: center;

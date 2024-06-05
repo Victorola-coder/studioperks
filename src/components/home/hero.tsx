@@ -58,13 +58,16 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="">
-        <h3 className="font-normal leading-[21.25px] text-center text-[25px] max-w-[1024px">
+      <div className="flex flex-col items-center gap-[30px] transform translate-y-10">
+        <h3 className="font-normal text-white leading-[21.25px] text-center text-[25px] max-w-5xl block mx-auto">
           “we are committed to{" "}
           <span className="font-bold">capturing your vision</span> and bringing
           it to life through{" "}
           <span className="font-bold">exceptional visual </span> storytelling.”
         </h3>
+        <button className="bg-[#FFFFFF40] text-white mx-auto block py-[19px] rounded-[8px] w-[220px] leading-[24px] text-[17px]">
+          Get to know more
+        </button>
       </div>
     </section>
   );

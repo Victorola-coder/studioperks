@@ -37,15 +37,15 @@ export default function Navbar() {
       link: "/about",
     },
     {
-      title: "Cameras",
-      link: "/cameras",
+      title: "Studio",
+      link: "/studio",
     },
     {
-      title: "Lighting",
-      link: "/lighting",
+      title: "Camera & Drones",
+      link: "/camera",
     },
     {
-      title: "Contact Us",
+      title: "Contacts",
       link: "/contact",
     },
   ];
