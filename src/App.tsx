@@ -1,7 +1,34 @@
-export default function App() {
+import {
+  createBrowserRouter,
+  Outlet,
+  RouterProvider,
+  ScrollRestoration,
+  // useLocation,
+} from "react-router-dom";
+
+const Root = () => {
   return (
-    <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
-  )
+    <>
+      {/* <Navbar /> */}
+      <ScrollRestoration />
+      <Outlet />
+      {/* <Footer /> */}
+    </>
+  );
+};
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Root />,
+    children: [
+      {
+        path: "*",
+        // element: <$404 />,
+      },
+    ],
+  },
+]);
+
+export default function App() {
+  return <RouterProvider router={router} />;
 }
