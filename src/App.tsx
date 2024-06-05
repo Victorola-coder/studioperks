@@ -5,9 +5,10 @@ import {
   ScrollRestoration,
   // useLocation,
 } from "react-router-dom";
-import { Home, NotFound } from "./pages";
-import { scroll } from "./animation";
 import { useEffect } from "react";
+import { scroll } from "./animation";
+import { Home, NotFound } from "./pages";
+import { Footer } from "./components/global";
 
 const Root = () => {
   return (
@@ -15,7 +16,7 @@ const Root = () => {
       {/* <Navbar /> */}
       <ScrollRestoration />
       <Outlet />
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };

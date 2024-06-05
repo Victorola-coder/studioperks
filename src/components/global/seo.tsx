@@ -1,4 +1,3 @@
-import { Helmet } from "react-helmet-async";
 import {
   META_DESCRIPTION,
   META_TITLE,
@@ -8,6 +7,7 @@ import {
   META_TYPE,
   META_URL,
 } from "../../constants";
+import { Helmet } from "react-helmet-async";
 
 interface Props {
   title: string;
