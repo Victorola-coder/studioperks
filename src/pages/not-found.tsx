@@ -8,7 +8,7 @@ export default function NotFound() {
       <div className="text-black text-center font-semibold text-xl">
         You are not supposed to see this page due to legal reasons.
         <br /> go to&nbsp;
-        <span className="text-vista underline">
+        <span className="text-black e">
           <Link to="/">home</Link>
         </span>
       </div>

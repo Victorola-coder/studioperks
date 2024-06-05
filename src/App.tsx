@@ -5,7 +5,9 @@ import {
   ScrollRestoration,
   // useLocation,
 } from "react-router-dom";
-import { Home } from "./pages";
+import { Home, NotFound } from "./pages";
+import { scroll } from "./animation";
+import { useEffect } from "react";
 
 const Root = () => {
   return (
@@ -24,7 +26,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "*",
-        // element: <$404 />,
+        element: <NotFound />,
       },
       {
         index: true,
@@ -35,5 +37,8 @@ const router = createBrowserRouter([
 ]);
 
 export default function App() {
+  useEffect(() => {
+    scroll;
+  }, []);
   return <RouterProvider router={router} />;
 }

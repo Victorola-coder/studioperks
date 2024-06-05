@@ -96,3 +96,9 @@ input::-webkit-inner-spin-button {
 input[type="number"] {
   -moz-appearance: textfield;
 }
+
+/* FONTS */
+@font-face {
+  font-family: GilroyLite;
+  src: url("../assets/fonts/Gilroy/Gilroy-Light.ttf") format("truetype");
+}
