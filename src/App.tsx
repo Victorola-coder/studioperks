@@ -5,6 +5,7 @@ import {
   ScrollRestoration,
   // useLocation,
 } from "react-router-dom";
+import { Home } from "./pages";
 
 const Root = () => {
   return (
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
       {
         path: "*",
         // element: <$404 />,
+      },
+      {
+        index: true,
+        element: <Home />,
       },
     ],
   },
