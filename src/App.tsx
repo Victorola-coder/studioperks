@@ -38,7 +38,7 @@ const router = createBrowserRouter([
 
 export default function App() {
   useEffect(() => {
-    scroll;
+    scroll();
   }, []);
   return <RouterProvider router={router} />;
 }

@@ -6,16 +6,17 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  outline: 1px solid red;
+  /* outline: 1px solid red; */
 }
 
 body {
   /* scroll-behavior: auto; */
   /* overflow-x: hidden; */
   /* overflow-y: scroll; */
-  color: white;
-  background-color: #a0df6a;
   /* background-image: url("/images/bg.svg"); */
+  color: black;
+  /* background-color: #a0df6a; */
+  background-color: white;
   background-repeat: no-repeat;
   background-position: center;
   font-family: "Aeonik", sans-serif;
