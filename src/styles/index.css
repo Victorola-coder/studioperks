@@ -18,7 +18,7 @@ body {
   /* background-image: url("/images/bg.svg"); */
   background-repeat: no-repeat;
   background-position: center;
-  font-family: "Bricolage Grotesque", sans-serif;
+  font-family: "Aeonik", sans-serif;
 }
 
 body::-webkit-scrollbar {
@@ -97,8 +97,21 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
 /* FONTS */
 @font-face {
-  font-family: GilroyLite;
-  src: url("../assets/fonts/Gilroy/Gilroy-Light.ttf") format("truetype");
+  font-family: "Aeonik";
+  src: url("../fonts/Aeonik/AeonikTRIAL-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "AeonikBold";
+  src: url("../fonts/Aeonik/AeonikTRIAL-Bold.otf") format("truetype");
 }
