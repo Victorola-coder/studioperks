@@ -8,12 +8,12 @@ import {
 import { useEffect } from "react";
 import { scroll } from "./animation";
 import { Home, NotFound } from "./pages";
-import { Footer } from "./components/global";
+import { Footer, Navbar } from "./components/global";
 
 const Root = () => {
   return (
     <>
-      {/* <Navbar /> */}
+      <Navbar />
       <ScrollRestoration />
       <Outlet />
       <Footer />
