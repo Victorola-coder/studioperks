@@ -4,6 +4,7 @@ import SpanColors from "../components/spanColors";
 import PerksSection from "../components/PerksSection";
 import PhotoSection from "../components/PhotoSection";
 import Rental from "../components/Rental";
+import CreditsSection from "../components/CreditsSection";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
         <PhotoSection />
         <SpanColors />
         <Rental />
+        <CreditsSection />
       </main>
     </Fragment>
   );
