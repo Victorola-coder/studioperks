@@ -5,6 +5,8 @@ import PerksSection from "../components/PerksSection";
 import PhotoSection from "../components/PhotoSection";
 import Rental from "../components/Rental";
 import CreditsSection from "../components/CreditsSection";
+import Faqs from "../components/Faqs";
+import RateCard from "../components/RateCard";
 
 export default function Home() {
   return (
@@ -17,6 +19,8 @@ export default function Home() {
         <SpanColors />
         <Rental />
         <CreditsSection />
+        <Faqs />
+        <RateCard />
       </main>
     </Fragment>
   );
