@@ -1,5 +1,3 @@
-import React from "react";
-
 const SpanColors = () => {
   const colors = ["#FDB441", "#FEDF30", "#26A6FE", "#E94444"];
   return (

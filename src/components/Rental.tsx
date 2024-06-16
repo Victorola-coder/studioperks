@@ -1,15 +1,7 @@
-import React from "react";
-
 const Rental = () => {
   return (
     <div className=" w-full h-fit relative min-h-[939px] bg-white">
-      <h1
-        className=" 
-text-[41px]
-font-[700]
-leading-[34.85px]
- mx-auto w-fit mt-[70px] uppercase flex"
-      >
+      <h1 className="text-[41px] font-[700] leading-[34.85px] mx-auto w-fit mt-[70px] uppercase flex">
         Video & Photography Equipment Rental
       </h1>
       <img
