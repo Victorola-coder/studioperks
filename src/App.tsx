@@ -10,6 +10,7 @@ import { scroll } from "./animation";
 import { Home, NotFound } from "./pages";
 import { Footer, Navbar } from "./components/global";
 import Studio from "./pages/studio";
+import About from "./pages/About";
 
 const Root = () => {
   return (
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
       {
         path: "/studio",
         element: <Studio />,
+      },
+      {
+        path: "/about",
+        element: <About />,
       },
     ],
   },
