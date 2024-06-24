@@ -1,4 +1,4 @@
-export const META_TITLE: string = ">Studioperks";
+export const META_TITLE: string = "Studioperks";
 export const META_DESCRIPTION: string =
   "we are committed to capturing your vision and bringing it to life through exceptional visual storytelling";
 export const META_IMAGE: string = "";

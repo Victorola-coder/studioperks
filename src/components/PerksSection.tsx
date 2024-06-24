@@ -11,7 +11,7 @@ const PerksSection = () => {
           <img
             key={logo}
             src="/images/studoperks.svg"
-            className=" w-[356px] opacity-[17%] object-cover object-center h-[77px]"
+            className="w-[356px] opacity-[17%] object-cover object-center h-[77px]"
             alt="perks"
           />
         ))}

@@ -1,5 +1,3 @@
-import React from "react";
-
 const PhotoSection = () => {
   const details = [
     {
