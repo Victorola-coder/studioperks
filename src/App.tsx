@@ -9,6 +9,7 @@ import { useEffect } from "react";
 import { scroll } from "./animation";
 import { Home, NotFound } from "./pages";
 import { Footer, Navbar } from "./components/global";
+import Studio from "./pages/studio";
 
 const Root = () => {
   return (
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Home />,
+      },
+      {
+        path: "/studio",
+        element: <Studio />,
       },
     ],
   },
