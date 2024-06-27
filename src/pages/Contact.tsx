@@ -4,9 +4,9 @@ const Contact = () => {
   return (
     <div className=" overflow-hidden w-full  relative">
       <SpanColors />
-      <div className=" bg-[#030303] md:px-[80px] w-full ">
+      {/* <div className=" bg-[#030303] md:px-[80px] w-full ">
         <Form />
-      </div>
+      </div> */}
 
       {/* <img
         src="/images/bigBg.png"
