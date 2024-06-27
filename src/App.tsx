@@ -11,6 +11,7 @@ import { Home, NotFound } from "./pages";
 import { Footer, Navbar } from "./components/global";
 import Studio from "./pages/studio";
 import About from "./pages/About";
+import Cameras from "./pages/Cameras";
 
 const Root = () => {
   return (
@@ -42,6 +43,10 @@ const router = createBrowserRouter([
       {
         path: "/about",
         element: <About />,
+      },
+      {
+        path: "/camera",
+        element: <Cameras />,
       },
     ],
   },
