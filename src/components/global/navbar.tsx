@@ -1,11 +1,14 @@
 import { useCallback, useRef, useState, useEffect } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 export default function Navbar() {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const navRef = useRef<any>(null);
   const [isOpened, setIsOpened] = useState<boolean>(false);
-
+  const location = useLocation();
+  // This is the current path
+  const currentPath = location.pathname;
+  console.log(currentPath);
   const handleClick = useCallback(
     function (e: Event) {
       if (isOpened && !navRef.current.contains(e.target)) {
@@ -50,11 +53,25 @@ export default function Navbar() {
     },
   ];
   return (
-    <header className="lg:mx-[196px] pt-5 mx-[30px] lg:py-[48px]  md:mx-[20px] md:py-[18px]">
+    <header
+      className={` ${
+        currentPath === "/contact" && "bg-black !text-white"
+      } lg:px-[196px] w-full pt-5 px-[30px] lg:py-[48px]  md:px-[20px] md:py-[18px]`}
+    >
       <nav className="flex flex-row items-center justify-between">
-        <figure>
-          <img src="images/logo.svg" alt="logo" />
-        </figure>
+        {currentPath !== "/contact" ? (
+          <figure>
+            <img src="images/logo.svg" alt="logo" />
+          </figure>
+        ) : (
+          <figure>
+            <img
+              className=" w-[225px] h-[48px] object-cover"
+              src="images/studoperks.png"
+              alt="logo"
+            />
+          </figure>
+        )}
         <div>
           <ul className="hidden md:flex gap-10">
             {navLinks.map((navLink, index) => (
@@ -65,7 +82,7 @@ export default function Navbar() {
                       isActive
                         ? "text-[#EE6161] before:w-full before:bg-[url('/images/bg-nav.svg')] before:bg-no-repeat before:bg-center"
                         : "text-black before:w-[0px] hover:before:w-full "
-                    } relative`}
+                    } ${currentPath === "/contact" && " !text-white"} relative`}
                   >
                     {navLink.title}
                   </li>
