@@ -12,6 +12,9 @@ import { Footer, Navbar } from "./components/global";
 import Studio from "./pages/studio";
 import About from "./pages/About";
 import Cameras from "./pages/Cameras";
+import AerialPhotography from "./pages/AerialPhotography";
+import VideoProduction from "./pages/VideoProduction";
+import Contact from "./pages/Contact";
 
 const Root = () => {
   return (
@@ -47,6 +50,18 @@ const router = createBrowserRouter([
       {
         path: "/camera",
         element: <Cameras />,
+      },
+      {
+        path: "/AerialPhotography",
+        element: <AerialPhotography />,
+      },
+      {
+        path: "/videoProduction",
+        element: <VideoProduction />,
+      },
+      {
+        path: "/contact",
+        element: <Contact />,
       },
     ],
   },

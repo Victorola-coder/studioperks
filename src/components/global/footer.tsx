@@ -1,3 +1,4 @@
+import { Form } from "../../pages/Contact";
 import { Link } from "react-router-dom";
 
 export default function Footer() {
@@ -32,16 +33,8 @@ export default function Footer() {
   ];
   return (
     <footer className="bg-[#000000]  text-white py-[55px] pl-[62px] md:px-[80px] md:py-[78px]">
+      <Form />
       <section className="flex flex-col gap-5">
-        <figure>
-          <img
-            src="/images/transp.svg"
-            alt="transparent_logo"
-            className=""
-            draggable={false}
-            loading="lazy"
-          />
-        </figure>
         {/* LINKS */}
         <div className="flex flex-col gap-[46px]  md:flex md:flex-row md:justify-between">
           <div>
