@@ -77,9 +77,9 @@
 
 .hero {
   scroll-behavior: auto;
-  overflow-x: hidden;
+  overflow: hidden;
   background-size: cover;
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
   background-image: url("/images/hero.png");
   background-repeat: no-repeat;
   background-position: center;
@@ -108,6 +108,7 @@ body::-webkit-scrollbar-thumb {
 html {
   scrollbar-color: rgb(0, 0, 0, 0.4) rgb(0, 0, 0, 0);
   scrollbar-width: thin;
+  box-sizing: border-box;
 }
 
 @keyframes bounce {

@@ -32,8 +32,15 @@ export default function Footer() {
     },
   ];
   return (
-    <footer className="bg-[#000000]  text-white py-[55px] pl-[62px] md:px-[80px] md:py-[78px]">
-      <Form />
+    <footer className="bg-[#000000] min-h-[606px]  lg:h-fit text-white py-[55px] pl-[62px] md:px-[80px] md:py-[78px]">
+      <div className=" hidden lg:flex">
+        <Form />
+      </div>
+      <img
+        className=" w-[225px] -translate-x-[5px] h-[48px] object-cover"
+        src="images/studoperks.png"
+        alt="logo"
+      />
       <section className="flex flex-col gap-5">
         {/* LINKS */}
         <div className="flex flex-col gap-[46px]  md:flex md:flex-row md:justify-between">

@@ -42,7 +42,14 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative hero w-full h-[700px] ">
+    <section className="relative overflow-hidden hero w-full h-[700px] ">
+      <div
+        style={{
+          background:
+            "linear-gradient(189.45deg, #FFFFFF -27.33%, rgba(255, 255, 255, 0) 94.8%)",
+        }}
+        className=" h-[167px] w-full shrink-0 flex z-50 absolute top-0  left-0 "
+      ></div>
       <figure>
         <img
           src="/images/hero.png"
@@ -51,14 +58,14 @@ export default function Hero() {
           alt="hero-bg"
         />
       </figure>
+
       <div className="sliderContainer absolute">
         <div className="slider font-red" ref={slider}>
           <p ref={firstText}>StudioPerks -</p>
           <p ref={secondText}>StudioPerks -</p>
         </div>
       </div>
-
-      <div className="flex flex-col items-center gap-[30px] transform translate-y-10">
+      <div className="flex flex-col absolute items-center gap-[30px]  bottom-[34px] left-1/2 -translate-x-1/2">
         <h3 className="font-normal text-white leading-[21.25px] text-center text-[25px] max-w-5xl block mx-auto">
           “we are committed to{" "}
           <span className="font-bold">capturing your vision</span> and bringing
