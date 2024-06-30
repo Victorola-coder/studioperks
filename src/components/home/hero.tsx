@@ -59,7 +59,7 @@ export default function Hero() {
         />
       </figure>
 
-      <div className="sliderContainer absolute">
+      <div className="sliderContainer hidden md:flex absolute">
         <div className="slider font-red" ref={slider}>
           <p ref={firstText}>StudioPerks -</p>
           <p ref={secondText}>StudioPerks -</p>

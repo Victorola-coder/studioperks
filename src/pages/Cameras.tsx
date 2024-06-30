@@ -4,26 +4,27 @@ const Cameras = () => {
   return (
     <div className=" min-h-[540px] flex flex-col items-center justify-center md:min-h-fit">
       <h1 className=" hidden md:flex uppercase text-center mb-[79px]  font-black leading-[34.85px]  text-[41px]  text-[#232323]">
-        Video & Photography Equipment Rental
+        <span className=" font-normal"> Video & Photography</span>{" "}
+        <span className=" invisible">i</span> Equipment Rental
       </h1>
-      <div className=" w-full h-[118.91px]  md:hidden"></div>
+
       <div className=" w-full flex flex-col">
         <div className=" flex justify-center items-center">
           <img
             src="/images/drone1.png"
             alt="drone"
-            className=" w-[606.03px] hidden md:flex  h-[341.06px]"
+            className=" w-[211.28px] md:w-[606.03px]  md:flex  h-[118.91px] md:h-[341.06px]"
           />
         </div>
         <div className=" flex justify-between  items-center">
-          <div className=" flex w-fit  flex-col">
+          <div className=" flex w-fit   flex-col">
             {" "}
             <img
               src="/images/group5.png"
               alt="drone"
-              className=" w-[399px] hidden md:flex   object-cover  h-[383px]"
+              className=" w-[139.11px] md:w-[399px]  md:flex   object-cover h-[133.53px]  md:h-[383px]"
             />
-            <div className=" text-[7.15px] leading-[6.08px] justify-end md:items-start items-center flex mt-2 pl-[21px] md:pl-[84px]">
+            <div className="  text-[7.15px] md:text-[20.5px] md:leading-[17.43px] leading-[6.08px] justify-start  items-center flex mt-2 pl-[21px] md:pl-[84px]">
               <img
                 src="/images/L.png"
                 alt="line"
@@ -40,9 +41,9 @@ const Cameras = () => {
             <img
               src="/images/lens.png"
               alt="drone"
-              className=" w-[385px] hidden md:flex  object-cover h-[385px]"
+              className=" md:w-[385px] w-[134.22px] md:flex  object-cover h-[134.22px] md:h-[385px]"
             />
-            <div className=" text-[7.15px] leading-[6.08px] justify-end md:items-start items-center flex mt-2 pr-5 md:pl-[84px]">
+            <div className="  text-[7.15px] md:text-[20.5px] md:leading-[17.43px] leading-[6.08px] justify-start  items-center flex mt-2 pl-[21px] md:pl-[84px]">
               <img
                 src="/images/L.png"
                 alt="line"
@@ -74,7 +75,7 @@ const Cameras = () => {
         </div>
       </div>
 
-      <ul className=" text-white mx-auto mt-[42px] w-[221.21px] md:w-[396px] h-[224px] md:h-[401px] flex list-disc justify-center items-center flex-col gap-1 md:gap-[27px] bg-[#7E7D7D]">
+      <ul className=" text-white mx-auto mt-[42px] w-[221.21px] md:w-[396px] h-[224px] md:h-[401px] flex list-disc justify-center items-center md:mb-auto mb-[79px]  flex-col gap-1 md:gap-[27px] bg-[#7E7D7D]">
         <li className=" font-normal  text-[13.97px] md:text-[25px] leading-[34.63px] md:leading-[18px]">
           Cameras and Lenses
         </li>

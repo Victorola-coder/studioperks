@@ -17,18 +17,18 @@ const PhotoSection = () => {
     },
   ];
   return (
-    <div className=" w-full h-[563px] flex shrink-0">
+    <div className=" w-full h-[563px] flex-col md:flex-row flex shrink-0">
       {details.map((d) => (
-        <div key={d.id} className=" flex-1 relative flex  items-end ">
+        <div
+          key={d.id}
+          className=" flex-1 h-[150px] md:h-auto relative flex  items-end "
+        >
           <img
             src={d.img}
             alt="image "
             className="absolute top-0 left-0 w-full h-full object-cover object-center"
           />
 
-          <p className=" text-left relative max-w-[349px]  text-[24px] leading-[20.4px]  text-white  mx-auto mb-[47px]">
-            {d.text}
-          </p>
           <div
             style={{
               background:
@@ -36,6 +36,9 @@ const PhotoSection = () => {
             }}
             className=" absolute bottom-0 left-0 w-full h-[214px]"
           ></div>
+          <p className="  text-left relative max-w-[349px] text-nowrap md:text-wrap text-[16px] md:text-[24px] ml-4 md:ml-auto leading-[13.6px] md:leading-[20.4px]  text-white mb-[29px] md:mx-auto md:mb-[47px]">
+            {d.text}
+          </p>
         </div>
       ))}
     </div>
