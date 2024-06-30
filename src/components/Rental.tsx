@@ -78,6 +78,7 @@ const Rental = () => {
           />
         </div>
       </div>
+      <div className="invisible"></div>
     </div>
   );
 };
