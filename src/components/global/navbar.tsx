@@ -34,29 +34,34 @@ export default function Navbar() {
     {
       title: "Home",
       link: "/",
+      borderImage: "/images/circularBorder.svg",
     },
     {
       title: "About Us",
       link: "/about",
+      borderImage: "/images/aboutNav.svg",
     },
     {
       title: "Studio",
       link: "/studio",
+      borderImage: "/images/studioNav.svg",
     },
     {
       title: "Camera & Drones",
       link: "/camera",
+      borderImage: "/images/contactBorder.svg",
     },
     {
       title: "Contacts",
       link: "/contact",
+      borderImage: "/images/circularBorder.svg",
     },
   ];
   return (
     <header
       className={` ${
         currentPath === "/contact" && "bg-black !text-white"
-      } lg:px-[196px] w-full pt-5 px-[30px] lg:py-[48px]  md:px-[20px] md:py-[18px]`}
+      } lg:px-[82px] w-full pt-5 px-[30px] lg:py-[48px]  md:px-[20px] md:py-[18px]`}
     >
       <nav className="flex flex-row items-center justify-between">
         {currentPath !== "/contact" ? (
@@ -78,13 +83,18 @@ export default function Navbar() {
               <NavLink key={index} to={navLink.link}>
                 {({ isActive }) => (
                   <li
-                    className={`before:content-[''] before:bg-[#EE6161] before:absolute before:h-1 before:-bottom-1 before:transition-all before:duration-300 ${
-                      isActive
-                        ? "text-[#EE6161] before:w-full before:bg-[url('/images/bg-nav.svg')] before:bg-no-repeat before:bg-center"
-                        : "text-black before:w-[0px] hover:before:w-full "
+                    className={`relative w-full font-medium text-[19px]  before:duration-300 ${
+                      isActive ? "text-[#EE6161] " : "text-black "
                     } ${currentPath === "/contact" && " !text-white"} relative`}
                   >
                     {navLink.title}
+                    {isActive && (
+                      <img
+                        src={navLink.borderImage}
+                        className="w-full object- scale-[1.2] object-center h-full absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2"
+                        alt=""
+                      />
+                    )}
                   </li>
                 )}
               </NavLink>
