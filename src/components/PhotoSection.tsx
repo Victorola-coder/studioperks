@@ -22,7 +22,7 @@ const PhotoSection = () => {
       {details.map((d) => (
         <motion.div
           key={d.id}
-          className=" flex-1 h-[150px] overflow-y-hidden md:h-auto relative flex  items-end "
+          className=" flex-1 h-[150px] overflow-hidden md:h-auto relative flex  items-end "
         >
           <motion.img
             initial={{ scale: 1 }}
@@ -30,7 +30,7 @@ const PhotoSection = () => {
             transition={{ duration: 2 }}
             src={d.img}
             alt="image "
-            className="absolute top-0 left-0 w-full h-full object-cover object-center"
+            className="absolute cursor-pointer top-0 left-0 w-full h-full object-cover object-center"
           />
 
           <div
