@@ -34,7 +34,7 @@ const Rental = () => {
         Video & Photography <span className="invisible">i</span>
         <span className="font-black"> Equipment Rental</span>
       </span>
-      <div className="w-full transition-all duration-300 ease-in-out flex flex-col">
+      <div className="w-full flex flex-col">
         <div className="flex justify-center items-center">
           <img
             src={images[0].url}
