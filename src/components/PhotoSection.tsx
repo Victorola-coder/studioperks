@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 const PhotoSection = () => {
   const details = [
     {
@@ -17,13 +18,16 @@ const PhotoSection = () => {
     },
   ];
   return (
-    <div className=" w-full h-[563px] flex-col md:flex-row flex shrink-0">
+    <div className=" w-full overflow-hidden h-[563px] flex-col md:flex-row flex shrink-0">
       {details.map((d) => (
-        <div
+        <motion.div
           key={d.id}
-          className=" flex-1 h-[150px] md:h-auto relative flex  items-end "
+          className=" flex-1 h-[150px] overflow-y-hidden md:h-auto relative flex  items-end "
         >
-          <img
+          <motion.img
+            initial={{ scale: 1 }}
+            whileHover={{ scale: 1.5 }}
+            transition={{ duration: 2 }}
             src={d.img}
             alt="image "
             className="absolute top-0 left-0 w-full h-full object-cover object-center"
@@ -39,7 +43,7 @@ const PhotoSection = () => {
           <p className="  text-left relative max-w-[349px] text-nowrap md:text-wrap text-[16px] md:text-[24px] ml-4 md:ml-auto leading-[13.6px] md:leading-[20.4px]  text-white mb-[29px] md:mx-auto md:mb-[47px]">
             {d.text}
           </p>
-        </div>
+        </motion.div>
       ))}
     </div>
   );
