@@ -8,16 +8,16 @@ import {
 
 const Faqs = () => {
   return (
-    <div className=" h-fit md:min-h-screen mb0[53px] md:mb-[414px] pt-[15px] md:pt-[51px]  ">
+    <div className=" h-fit  md:mb-[100px] pt-[15px] md:pt-[51px]  ">
       <div className="  pl-[34.61px] md:pl-0 w-fit  flex gap-3 md:gap-[23px] mx-auto  items-center">
         <h1 className="  text-[30.9px] md:text-[71.63px] font-black leading-[26.26px] md:leading-[60.89px] text-black relative">
           FAQS
         </h1>
-        <div className=" h-[39.69px] flex items-center  md:h-[92px] w-[660px] ">
-          <div className=" h-full w-[71.17px] bg-[#FDB441]"></div>
-          <div className=" h-full w-[71.17px] bg-[#FEDF30]"></div>
-          <div className=" h-full w-[71.17px] bg-[#26A6FE]"></div>
-          <div className=" h-full w-[71.17px] bg-[#E94444]"></div>
+        <div className=" h-[39.69px]  flex items-center  md:h-[92px] w-[660px] ">
+          <div className=" h-full md:w-[165px] w-[71.17px] bg-[#FDB441]"></div>
+          <div className=" h-full md:w-[165px] w-[71.17px] bg-[#FEDF30]"></div>
+          <div className=" h-full md:w-[165px] w-[71.17px] bg-[#26A6FE]"></div>
+          <div className=" h-full md:w-[165px] w-[71.17px] bg-[#E94444]"></div>
         </div>
       </div>
       <Accordion

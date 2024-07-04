@@ -43,13 +43,13 @@ export default function Hero() {
 
   return (
     <section className="relative overflow-hidden hero w-full h-[700px] ">
-      <div
-        style={{
-          background:
-            "linear-gradient(189.45deg, #FFFFFF -27.33%, rgba(255, 255, 255, 0) 94.8%)",
-        }}
-        className=" h-[167px] w-full shrink-0 flex z-50 absolute top-0  left-0 "
-      ></div>
+      <div className=" h-[167px] w-full shrink-0 flex z-50 absolute top-0  left-0 ">
+        <img
+          src="/images/gardient.svg"
+          className="w-full h-full object-cover"
+          alt=""
+        />
+      </div>
       <figure>
         <img
           src="/images/hero.png"
@@ -59,12 +59,27 @@ export default function Hero() {
         />
       </figure>
 
-      <div className="sliderContainer hidden md:flex absolute">
-        <div className="slider font-red" ref={slider}>
-          <p ref={firstText}>StudioPerks -</p>
-          <p ref={secondText}>StudioPerks -</p>
+      <div className="sliderContainer bg-transparent hidden md:flex absolute">
+        <div
+          ref={slider}
+          className=" h-[698px]  top-0 slider w-[2483px] hidden md:flex flex-nowrap left-0 absolute"
+        >
+          <img
+            ref={firstText}
+            src="/images/movingImage.svg"
+            className="w-full h-full object-top   opacity-30  object-contain "
+            alt=""
+          />{" "}
+          -
+          <img
+            ref={secondText}
+            src="/images/movingImage.svg"
+            className="w-full h-full object-top   opacity-30  object-contain "
+            alt=""
+          />{" "}
         </div>
       </div>
+
       <div className="flex flex-col absolute items-center gap-[30px]  bottom-[34px] left-1/2 -translate-x-1/2">
         <h3 className="font-normal text-white leading-[21.25px] text-center text-[25px] max-w-5xl block mx-auto">
           “we are committed to{" "}

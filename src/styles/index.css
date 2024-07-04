@@ -187,7 +187,8 @@ input[type="number"]::-webkit-outer-spin-button {
   position: absolute;
   top: calc(100vh - 500px);
   overflow: hidden;
-
+  /* background: #000; */
+  top: 0%;
   @media screen and (max-width: 768px) {
     top: 50%;
     transform: translateY(-50%);
@@ -199,7 +200,7 @@ input[type="number"]::-webkit-outer-spin-button {
   white-space: nowrap;
 }
 
-.slider p {
+.slider img {
   position: relative;
   margin: 0px;
   color: white;
@@ -211,7 +212,7 @@ input[type="number"]::-webkit-outer-spin-button {
   }
 }
 
-.slider p:nth-of-type(2) {
+.slider img:nth-of-type(2) {
   position: absolute;
   left: 100%;
   top: 0;
