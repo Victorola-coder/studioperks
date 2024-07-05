@@ -36,7 +36,7 @@ const AboutAlone = () => {
               alt=""
             />
           </div>
-          <div className=" flex flex-col justify-end w-full items-end">
+          <div className="flex flex-col justify-end w-full items-end">
             <h1 className="font-black  mt-[26px] text-[#000000] text-[71.63px]  leading-[60.89px] ">
               Our Mission
             </h1>
