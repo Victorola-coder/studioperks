@@ -1,8 +1,9 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import gsap from "gsap";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ScrollTrigger } from "gsap/all";
 // import { AnimatePresence } from "framer-motion";
-
+import videoSource from "/images/studioperks.mp4";
 export default function Hero() {
   const slider = useRef(null);
   const firstText = useRef(null);
@@ -40,6 +41,7 @@ export default function Hero() {
     requestAnimationFrame(animate);
     xPercent += 0.1 * direction;
   };
+  const [isVideoMuted, setIsVideoMuted] = useState(true); // State for muting/unmuting video
 
   return (
     <section className="relative overflow-hidden hero w-full h-[700px] ">
@@ -51,12 +53,23 @@ export default function Hero() {
         />
       </div>
       <figure>
-        <img
+        {/* <img
           src="/images/hero.png"
           draggable={false}
           className="w-full hidden relative"
           alt="hero-bg"
         />
+         */}
+        <video
+          autoPlay
+          muted={isVideoMuted}
+          loop
+          className="absolute top-0 left-0 w-full h-full object-cover z-0"
+        >
+          <source src={videoSource} type="video/mp4" />
+          {/* Add other video sources here for different formats */}
+          Your browser does not support the video tag.
+        </video>
       </figure>
 
       <div className="sliderContainer bg-transparent hidden md:flex absolute">

@@ -7,8 +7,8 @@ const About = () => {
       <div className=" relative  h-[540px] md:h-auto">
         <div className="left-0 z-10 absolute w-[481.21px] h-[540.01px] md:w-[1264.47px] md:h-[1418.98px]">
           <img
-            className=" w-full h-full object-contain object-center"
-            src="/images/aboutBgRemoved.png"
+            className=" w-full h-full bgred object-contain object-center"
+            src="/images/result.webp"
             alt=""
           />
         </div>
