@@ -1,10 +1,10 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 const Rental = () => {
-  const [images, setImages] = useState([
+  const [images] = useState([
     {
       id: 1,
       url: "/images/drone1.png",
@@ -16,15 +16,6 @@ const Rental = () => {
     },
     {
       id: 2,
-      url: "/images/cameraclearer.svg",
-      desc: "Sony Cinema Line <br /> Camera - FX3",
-      dimensions: {
-        width: "385px",
-        height: "385px",
-      },
-    },
-    {
-      id: 3,
       url: "/images/lensfull.svg",
       desc: "Sets of Cinema <br /> Lens for high <br /> picture quality.",
       dimensions: {
@@ -32,156 +23,177 @@ const Rental = () => {
         height: "383px",
       },
     },
+    {
+      id: 3,
+      url: "/images/cameraclearer.svg",
+      desc: "Sony Cinema Line <br /> Camera - FX3",
+      dimensions: {
+        width: "385px",
+        height: "385px",
+      },
+    },
   ]);
+  const [positions, setPositions] = useState(0);
 
-  const handleRotateImages = () => {
-    setImages((prevImages) => {
-      const [first, ...rest] = prevImages;
-      return [...rest, first];
-    });
-  };
+  // const handleRotateImages = () => {
+  //   setImages((prevImages) => {
+  //     const [first, ...rest] = prevImages;
+  //     return [...rest, first];
+  //   });
+  // };
 
-  const getImageStyle = (image: any) => {
-    const baseStyle = {
-      width: image.dimensions.width,
-      height: image.dimensions.height,
-    };
-    if (
-      image.url === "/images/drone1.png" &&
-      images[2].url === "/images/drone1.png"
-    ) {
-      return {
-        ...baseStyle,
-        transform: "translateX(163px)",
-      };
+  const getBoxStyle = (boxNumber: number) => {
+    switch (boxNumber) {
+      case 0:
+        if (positions === 0) {
+          return {
+            left: "315px",
+            top: "-42px",
+          };
+        } else if (positions === 1) {
+          return {
+            left: "-173px",
+            top: "257px",
+          };
+        } else {
+          return {
+            left: "837px",
+            top: "195px",
+            transform: "translateX(0%)",
+          };
+        }
+      case 1:
+        if (positions === 0) {
+          return {
+            left: "-33px",
+            top: "165px",
+          };
+        } else if (positions === 1) {
+          return {
+            left: "972px",
+            top: "95px",
+          };
+        } else {
+          return {
+            left: "448px",
+            top: "-26px",
+            transform: "translateX(0%)",
+          };
+        }
+      case 2:
+        if (positions === 0) {
+          return {
+            left: "986px",
+            top: "180px",
+          };
+        } else if (positions === 1) {
+          return {
+            left: "448px",
+            top: "-45px",
+            transform: "translateX(0%)",
+          };
+        } else {
+          return {
+            left: "-27px",
+            top: "214px",
+            transform: "translateX(0%)",
+          };
+        }
+      default:
+        return {};
     }
-    if (
-      image.url === "/images/lensfull.svg" &&
-      images[2].url === "/images/lensfull.svg"
-    ) {
-      return {
-        ...baseStyle,
-        // transform: "translateX(91px)",
-      };
-    }
-    if (
-      image.url === "/images/cameraclearer.svg" &&
-      images[2].url === "/images/cameraclearer.svg"
-    ) {
-      return {
-        ...baseStyle,
-        top: "95px",
-        right: "-91px",
-      };
-    }
-    return baseStyle;
   };
-
-  const variants = {
-    initial: { opacity: 0, x: -20, y: 0 },
-    animate: { opacity: 1, x: 0, y: 0, transition: { duration: 0.5 } },
-    exit: { opacity: 0, x: 20, y: 0, transition: { duration: 0.5 } },
-    // trail: {
-    //   hidden: { opacity: 0, x: -100 },
-    //   visible: {
-    //     opacity: 1,
-    //     x: 0,
-    //     transition: { type: "spring", stiffness: 50 },
-    //   },
-    // },
+  console.log(positions);
+  console.log("b1", getBoxStyle(0));
+  console.log("b2", getBoxStyle(1));
+  console.log("b3", getBoxStyle(2));
+  const swapPosition = () => {
+    setPositions((prevPosition) => (prevPosition === 2 ? 0 : prevPosition + 1));
   };
-
   return (
     <div className="w-full relative pb-0 h-[336px] md:h-fit bg-white">
       <span className="text-[14px] mb-[49px] md:text-[41px] font-[400] leading-[11.9px] md:leading-[34.85px] mx-auto w-fit mt-[35px] md:mt-[70px] uppercase flex">
         Video & Photography <span className="invisible">i</span>
         <span className="font-black"> Equipment Rental</span>
       </span>
-      <div className="h-[755px] bg-resd-600 relative">
+      <div className="h-[755px] w-[1280px]  relative">
         <div className="w-full relative h-full flex flex-col">
-          <div className="flex justify-center absolute top-[-42px] left-1/2 -translate-x-1/2 items-center">
-            <AnimatePresence mode="wait">
-              <motion.img
-                key={images[0].id}
-                src={images[0].url}
-                alt="drone"
-                className="hidden object-contain md:flex"
-                style={getImageStyle(images[0])}
-                variants={variants}
-                initial="initial"
-                animate="animate"
-                exit="exit"
-              />
-            </AnimatePresence>
-          </div>
+          <motion.div
+            style={getBoxStyle(0)}
+            animate={getBoxStyle(0)}
+            transition={{ duration: 0.5 }}
+            className="flex justify-center w-[606.03px] h-[341.06px]  absolute items-center"
+          >
+            <motion.img
+              key={images[0].id}
+              src={images[0].url}
+              alt="drone"
+              className="hidden transition-all duration-100 object-contain md:flex"
+            />
+          </motion.div>
           <div className="flex justify-between items-center">
-            <div className="flex w-fit top-[165px] absolute left-[-33px] flex-col">
-              <AnimatePresence mode="wait">
-                <motion.img
-                  key={images[1].id}
-                  src={images[1].url}
-                  alt="drone"
-                  className="md:flex object-cover"
-                  style={getImageStyle(images[1])}
-                  variants={variants}
-                  initial="initial"
-                  animate="animate"
-                  exit="exit"
-                />
-              </AnimatePresence>
-              <div className="text-[7.15px] md:text-[20.5px] md:leading-[17.43px] leading-[6.08px] justify-start items-center flex mt-2 pl-[21px] md:pl-[84px]">
-                <img
-                  src="/images/L.png"
-                  alt="line"
-                  className="md:w-[53px] w-[18px] h-[33px] md:h-[95px]"
-                />
-                <span
-                  className="-translate-x-[9px] md:translate-x-[-24px]"
-                  dangerouslySetInnerHTML={{ __html: images[1].desc }}
-                />
-              </div>
-            </div>
-            <div className="flex md:hidden justify-center items-center">
-              <AnimatePresence mode="wait">
-                <motion.img
-                  key={images[2].id}
-                  src={images[2].url}
-                  alt="drone"
-                  className="md:flex object-cover"
-                  style={getImageStyle(images[2])}
-                  variants={variants}
-                  initial="initial"
-                  animate="animate"
-                  exit="exit"
-                />
-              </AnimatePresence>
-            </div>
-            <div>
-              <AnimatePresence mode="wait">
-                <motion.img
-                  key={images[2].id}
-                  src={images[2].url}
-                  alt="drone"
-                  className="md:flex top-[180px] absolute right-[-91px] object-cover"
-                  style={getImageStyle(images[2])}
-                  variants={variants}
-                  initial="initial"
-                  animate="animate"
-                  exit="exit"
-                />
-              </AnimatePresence>
-              <div className="text-[7.15px] absolute bottom-[182px] right-[190px] md:text-[20.5px] md:leading-[17.43px] leading-[6.08px] flex items-center">
-                <img
-                  src="/images/L.png"
-                  alt="line"
-                  className="md:w-[53px] w-[18px] h-[33px] md:h-[95px]"
-                />
-                <span
-                  className="translate-x-[-37px]"
-                  dangerouslySetInnerHTML={{ __html: images[2].desc }}
-                />
-              </div>
-            </div>
+            <motion.div
+              style={getBoxStyle(1)}
+              animate={getBoxStyle(1)}
+              transition={{ duration: 0.5 }}
+              className="flex w-fit  absolute  flex-col"
+            >
+              <motion.img
+                key={images[2].id}
+                src={images[2].url}
+                alt="drone"
+                className="md:flex transition-all duration-100 object-cover"
+              />
+            </motion.div>
+            <motion.div className="flex md:hidden justify-center items-center">
+              <motion.img
+                key={images[2].id}
+                src={images[2].url}
+                alt="drone"
+                className="md:flex transition-all duration-100 object-cover"
+              />
+            </motion.div>
+            <motion.div
+              style={getBoxStyle(2)}
+              animate={getBoxStyle(2)}
+              transition={{ duration: 0.5 }}
+              className="relative w-[385px] h-[385px] object-cover"
+            >
+              <motion.img
+                key={images[1].id}
+                src={images[1].url}
+                alt="drone"
+                className="md:flex w-full h-full object-cover"
+              />
+            </motion.div>
+          </div>
+          <div className="text-[7.15px] absolute top-[528px] left-[84px] md:text-[20.5px] md:leading-[17.43px] leading-[6.08px] justify-start items-center flex mt-2 ">
+            <img
+              src="/images/L.png"
+              alt="line"
+              className="md:w-[53px] w-[18px] h-[33px] md:h-[95px]"
+            />
+            <span
+              className="-translate-x-[9px] md:translate-x-[-24px]"
+              dangerouslySetInnerHTML={{
+                __html:
+                  images[positions === 0 ? 2 : positions === 1 ? 0 : 1].desc,
+              }}
+            />
+          </div>
+          <div className="text-[7.15px]  absolute bottom-[182px] right-[190px] md:text-[20.5px] md:leading-[17.43px] leading-[6.08px] flex items-center">
+            <img
+              src="/images/L.png"
+              alt="line"
+              className="md:w-[53px] w-[18px] h-[33px] md:h-[95px]"
+            />
+            <span
+              className="translate-x-[-37px]"
+              dangerouslySetInnerHTML={{
+                __html:
+                  images[positions === 0 ? 1 : positions === 1 ? 2 : 0].desc,
+              }}
+            />
           </div>
         </div>
         <div className="border-[2px] absolute bottom-[42px] left-1/2 -translate-x-1/2 rounded-[6px] bg-white border-[#C3C3C3] w-fit h-fit mx-auto">
@@ -190,17 +202,17 @@ const Rental = () => {
               className="size-[18px] md:size-[51px] cursor-pointer"
               src="/images/Polygon3.png"
               alt=""
-              onClick={handleRotateImages}
+              onClick={swapPosition}
             />
             <p
               className="text-nowrap msl-4 md:msl-[51px] w-[178px]"
-              dangerouslySetInnerHTML={{ __html: images[0].desc }}
+              dangerouslySetInnerHTML={{ __html: images[0 + positions].desc }}
             />
             <img
               className="size-[18px] md:size-[51px] cursor-pointer"
               src="/images/Polygon4.png"
               alt=""
-              onClick={handleRotateImages}
+              onClick={swapPosition}
             />
           </div>
         </div>

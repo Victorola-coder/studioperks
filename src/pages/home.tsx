@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { Fragment } from "react";
 import { Hero } from "../components/home";
 import SpanColors from "../components/spanColors";
@@ -7,6 +8,7 @@ import Rental from "../components/Rental";
 import CreditsSection from "../components/CreditsSection";
 import Faqs from "../components/Faqs";
 import RateCard from "../components/RateCard";
+import RentalTwin from "@/components/RentalTwin";
 // import AboutAlone from "@/components/AboutAlone";
 
 export default function Home() {
@@ -20,6 +22,7 @@ export default function Home() {
         <PhotoSection />
         <SpanColors />
         <Rental />
+        {/* <RentalTwin /> */}
         <CreditsSection />
         <Faqs />
         <RateCard />
