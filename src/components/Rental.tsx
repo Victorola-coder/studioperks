@@ -103,10 +103,10 @@ const Rental = () => {
         return {};
     }
   };
-  console.log(positions);
-  console.log("b1", getBoxStyle(0));
-  console.log("b2", getBoxStyle(1));
-  console.log("b3", getBoxStyle(2));
+  // console.log(positions);
+  // console.log("b1", getBoxStyle(0));
+  // console.log("b2", getBoxStyle(1));
+  // console.log("b3", getBoxStyle(2));
   const swapPosition = () => {
     setPositions((prevPosition) => (prevPosition === 2 ? 0 : prevPosition + 1));
   };

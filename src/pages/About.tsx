@@ -5,10 +5,10 @@ const About = () => {
   return (
     <div className=" relative overflow-x-hidden w-full min-h-[1385px]">
       <div className=" relative  h-[540px] md:h-auto">
-        <div className="left-0 z-10 absolute w-[481.21px] h-[540.01px] md:w-[1264.47px] md:h-[1418.98px]">
+        <div className="left-[-80px]  z-10 rotate-[-15.69deg] absolute w-[481.21px] top-[-148px] h-[540.01px] md:w-[1264.47px] md:h-[1418.98px]">
           <img
-            className=" w-full h-full bgred object-contain object-center"
-            src="/images/result.webp"
+            className=" w-full h-full scale-[1.2] rotate-[15.69deg] object-cover object-center"
+            src="/images/fileCamera.png"
             alt=""
           />
         </div>
@@ -32,8 +32,8 @@ const About = () => {
           </div>
         </div>
 
-        <div className="w-full  absolute md:relative bottom-[41px] h-fit mt-[120px] z-20   flex flex-col md:items-end md:pr-[350px] md:justify-end">
-          <div className=" ml-[84px] md:ml-auto w-[263.56px] md:w-[692.56px] flex flex-col justify-end">
+        <div className="w-full   absolute md:relative bottom-[41px] h-fit mt-[120px] z-20   flex flex-col md:items-end md:pr-[350px] md:justify-end">
+          <div className=" ml-[84px] md:ml-[274px] w-[263.56px] md:w-[692.56px] flex flex-col justify-end">
             <div className=" h-[101.84px] md:h-[267px] rounded-[31.64px] overflow-hidden w-full ">
               <img
                 src="/images/mission.png"
@@ -41,11 +41,11 @@ const About = () => {
                 alt=""
               />
             </div>
-            <div>
-              <h1 className="font-black mt-3  md:mt-[34px] text-[#000000] text-[35.82px] md:text-[94.14px] leading-[30.45px]  md:leading-[80.02px] ">
+            <div className=" w-full  flex flex-col items-end ">
+              <h1 className="font-black mt-3 max-w-[576.92px]  md:mt-[34px] text-[#000000] text-[35.82px] md:text-[94.14px] leading-[30.45px]  md:leading-[80.02px] ">
                 Our Mission
               </h1>
-              <p className=" leading-[6.97px] md:leading-[18.32px] mt-1 md:mt-[13px] text-[8.2px] md:text-[21.55px] font-normal">
+              <p className=" leading-[6.97px]  max-w-[499.99px] md:leading-[18.32px] mt-1 md:mt-[13px] text-[8.2px] md:text-[21.55px] font-normal">
                 our mission is to provide innovative and high-quality visual
                 content that helps organizations and brands effectively
                 communicate their message and achieve their goals.{" "}
