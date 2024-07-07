@@ -41,7 +41,7 @@ export default function Hero() {
     requestAnimationFrame(animate);
     xPercent += 0.1 * direction;
   };
-  const [isVideoMuted, setIsVideoMuted] = useState(true); // State for muting/unmuting video
+  const [isVideoMuted] = useState(true); // State for muting/unmuting video
 
   return (
     <section className="relative overflow-hidden hero w-full h-[700px] ">

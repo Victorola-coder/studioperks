@@ -8,7 +8,6 @@ import Rental from "../components/Rental";
 import CreditsSection from "../components/CreditsSection";
 import Faqs from "../components/Faqs";
 import RateCard from "../components/RateCard";
-import RentalTwin from "@/components/RentalTwin";
 // import AboutAlone from "@/components/AboutAlone";
 
 export default function Home() {
