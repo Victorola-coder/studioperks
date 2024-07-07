@@ -241,7 +241,7 @@ const Cameras = () => {
           return isMobile
             ? {
                 left: "150px",
-                top: "50px",
+                top: "px",
                 transform: "translateX(0%)",
               }
             : {
