@@ -15,6 +15,7 @@ import Cameras from "./pages/Cameras";
 import AerialPhotography from "./pages/AerialPhotography";
 import VideoProduction from "./pages/VideoProduction";
 import Contact from "./pages/Contact";
+import DescCamer from "./pages/DescCamer";
 
 const Root = () => {
   return (
@@ -50,6 +51,10 @@ const router = createBrowserRouter([
       {
         path: "/camera",
         element: <Cameras />,
+      },
+      {
+        path: "/camera/:id",
+        element: <DescCamer />,
       },
       {
         path: "/AerialPhotography",

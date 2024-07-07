@@ -64,11 +64,9 @@ export default function Hero() {
           autoPlay
           muted={isVideoMuted}
           loop
-          className="absolute top-0 left-0 w-full h-full object-cover z-0"
+          className="absolute bg-red-300 top-0 left-0 w-full h-full object-cover z-0"
         >
           <source src={videoSource} type="video/mp4" />
-          {/* Add other video sources here for different formats */}
-          Your browser does not support the video tag.
         </video>
       </figure>
 
