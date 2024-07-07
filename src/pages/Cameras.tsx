@@ -389,22 +389,24 @@ const SectionDisplay = ({ data }: { data: SectionData }) => {
   if (!data) return null;
   return (
     <div className="w-full h-fit pb-[263px]">
-      <h1 className="font-black text-center uppercase mb-[63px] text-[41px] leading-[34.85px] mx-auto text-[#232323]">
+      <h1 className="font-black text-center uppercase mb-[63px] text-[26.12px] md:text-[41px] leading-[22.21px] md:leading-[34.85px] mx-auto text-[#232323]">
         {data.title}
       </h1>
-      <div className="flex flex-wrap justify-between px-[103px]">
+      <div className="flex flex-wrap justify-between px-[27px] md:px-[103px]">
         {data.images.map((image) => (
           <Link
             key={image.id}
-            to={image.link}
-            className="max-w-[296px] h-fit flex flex-col gap-[2px]"
+            to={`/camera/${image.link}`}
+            className=" max-w-[163px] md:max-w-[296px] h-fit flex flex-col gap-[2px]"
           >
             <img
-              className="w-[268px] object-center h-[257.25px] object-contain"
+              className="md:w-[268px] w-[147.49px] object-center h-[141.58px] md:h-[257.25px] object-contain"
               src={image.url}
               alt=""
             />
-            <p className=" text-[20.5px] leading-[17.43px]">{image.desc}</p>
+            <p className="  leading-[9.59px] text-[11.28px] md:text-[20.5px] md:leading-[17.43px]">
+              {image.desc}
+            </p>
           </Link>
         ))}
       </div>
