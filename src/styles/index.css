@@ -187,7 +187,6 @@ input[type="number"]::-webkit-outer-spin-button {
   position: absolute;
   top: calc(100vh - 500px);
   overflow: hidden;
-  background: #000;
   top: 0%;
   @media screen and (max-width: 768px) {
     top: 50%;
