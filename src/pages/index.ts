@@ -1,2 +1,9 @@
 export { default as Home } from "./home";
+export { default as About } from "./about";
+export { default as Studio } from "./studio";
+export { default as Contact } from "./contact";
+export { default as Cameras } from "./cameras";
 export { default as NotFound } from "./not-found";
+export { default as DescCamera } from "./descCamera";
+export { default as AerialPhoto } from "./aerialPhotography";
+export { default as VideoProduction } from "./videoProduction";

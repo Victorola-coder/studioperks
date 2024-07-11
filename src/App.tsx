@@ -7,15 +7,18 @@ import {
 } from "react-router-dom";
 import { useEffect } from "react";
 import { scroll } from "./animation";
-import { Home, NotFound } from "./pages";
+import {
+  Home,
+  NotFound,
+  About,
+  AerialPhoto,
+  Cameras,
+  DescCamera,
+  Studio,
+  VideoProduction,
+  Contact,
+} from "./pages";
 import { Footer, Navbar } from "./components/global";
-import Studio from "./pages/studio";
-import About from "./pages/About";
-import Cameras from "./pages/Cameras";
-import AerialPhotography from "./pages/AerialPhotography";
-import VideoProduction from "./pages/VideoProduction";
-import Contact from "./pages/Contact";
-import DescCamer from "./pages/DescCamer";
 
 const Root = () => {
   return (
@@ -54,11 +57,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/camera/:id",
-        element: <DescCamer />,
+        element: <DescCamera />,
       },
       {
         path: "/AerialPhotography",
-        element: <AerialPhotography />,
+        element: <AerialPhoto />,
       },
       {
         path: "/videoProduction",

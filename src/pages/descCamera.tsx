@@ -1,7 +1,7 @@
 import { ChevronRightIcon } from "lucide-react";
 import { Link } from "react-router-dom";
 
-const DescCamer = () => {
+const DescCamera = () => {
   return (
     <section className="px-[30px] md:px-[63px] md:py-[76px] py-[18px]">
       <div className=" uppercase flex items-center text-[6.73px] mb-[126px] md:text-[20.55px] md:leading-[17.47px]  leading-[5.72px] font-[700]">
@@ -43,4 +43,4 @@ const DescCamer = () => {
   );
 };
 
-export default DescCamer;
+export default DescCamera;
