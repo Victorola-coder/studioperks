@@ -1,4 +1,4 @@
-import { Form } from "../../pages/Contact";
+import { Form } from "../../pages/contact";
 import { Link } from "react-router-dom";
 
 export default function Footer() {
