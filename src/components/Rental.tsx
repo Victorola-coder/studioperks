@@ -50,7 +50,7 @@ const Rental = () => {
           return isMobile
             ? {
                 left: "110px",
-                top: "39px",
+                top: "55px",
               }
             : {
                 left: "315px",
@@ -94,7 +94,7 @@ const Rental = () => {
           return isMobile
             ? {
                 left: "335px",
-                top: "40px",
+                top: "90px",
               }
             : {
                 left: "972px",
@@ -166,8 +166,8 @@ const Rental = () => {
         Video & Photography <span className="invisible">i</span>
         <span className="font-black"> Equipment Rental</span>
       </span>
-      <div className="md:h-[755px] min-h-[289px] w-full md:w-[1280px]  relative">
-        <div className="w-full  relative h-full flex flex-col">
+      <div className="md:h-[755px] min-h-[263.22px] w-[1280px]  relative">
+        <div className="w-full relative h-full flex flex-col">
           <motion.div
             style={getBoxStyle(0)}
             animate={getBoxStyle(0)}
@@ -217,7 +217,7 @@ const Rental = () => {
               />
             </motion.div>
           </div>
-          <div className="text-[7.15px]  absolute top-[184px] md:top-[528px] left-[21.29px] md:left-[84px] md:text-[20.5px] md:leading-[17.43px] leading-[6.08px] justify-start items-center flex mt-2">
+          <div className="text-[7.15px] absolute top-[184px] md:top-[528px] left-[21.29px] md:left-[84px] md:text-[20.5px] md:leading-[17.43px] leading-[6.08px] justify-start items-center flex mt-2">
             <img
               src="/images/L.png"
               alt="line"
@@ -231,7 +231,7 @@ const Rental = () => {
               }}
             />
           </div>
-          <div className="text-[7.15px]  absolute top-[180px] md:bottom-[182px] right-[21px] md:right-[21px] md:text-[20.5px] md:leading-[17.43px] leading-[6.08px] flex items-center">
+          <div className="text-[7.15px] absolute bottom-[63.45px] md:bottom-[182px] right-[58px] md:right-[190px] md:text-[20.5px] md:leading-[17.43px] leading-[6.08px] flex items-center">
             <img
               src="/images/L.png"
               alt="line"
