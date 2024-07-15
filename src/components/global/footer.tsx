@@ -32,12 +32,12 @@ export default function Footer() {
     },
   ];
   return (
-    <footer className="bg-[#000000] min-h-[606px]  lg:h-fit text-white py-[55px] pl-[62px] md:px-[80px] md:py-[78px]">
+    <footer className="bg-[#000000] min-h-[606px] lg:h-fit text-white py-[55px] pl-[32px] md:px-[80px] md:py-[78px]">
       <div className=" hidden lg:flex">
         <Form />
       </div>
       <img
-        className=" w-[225px] -translate-x-[5px] h-[48px] object-cover"
+        className="w-[225px] -translate-x-[5px] h-[48px] object-cover"
         src="images/studoperks.png"
         alt="logo"
       />
