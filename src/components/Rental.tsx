@@ -61,7 +61,7 @@ const Rental = () => {
         } else if (positions === 1) {
           return isMobile
             ? {
-                left: "0%",
+                left: "-10%",
                 top: "35%",
                 translateX: "0%",
               }
@@ -97,7 +97,7 @@ const Rental = () => {
         } else if (positions === 1) {
           return isMobile
             ? {
-                left: "80%",
+                left: "75%",
                 top: "15%",
               }
             : {
@@ -108,7 +108,7 @@ const Rental = () => {
           return isMobile
             ? {
                 left: "40%",
-                top: "10%",
+                top: "0%",
               }
             : {
                 left: "50%",
@@ -195,7 +195,7 @@ const Rental = () => {
                 key={images[2].id}
                 src={images[2].url}
                 alt="drone"
-                className="md:flex transition-all duration-100 object-cover"
+                className="md:flex  transition-all duration-100 object-cover"
               />
             </motion.div>
             {/* <motion.div className="flex md:hidden justify-center items-center">

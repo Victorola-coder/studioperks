@@ -162,104 +162,107 @@ const Cameras = () => {
         if (positions === 0) {
           return isMobile
             ? {
-                left: "110px",
-                top: "55px",
+                left: "50%",
+                top: "10%",
+                translateX: "-50%",
               }
             : {
-                left: "315px",
-                top: "-42px",
+                left: "50%",
+                top: "0%",
+                translateX: "-50%",
               };
         } else if (positions === 1) {
           return isMobile
             ? {
-                left: "-31.98px",
-                top: "130px",
+                left: "-10%",
+                top: "35%",
+                translateX: "0%",
               }
             : {
-                left: "-173px",
-                top: "257px",
+                left: "-10%",
+                top: "40%",
+                translateX: "0%",
               };
         } else {
           return isMobile
             ? {
-                left: "215px",
-                top: "95px",
-                transform: "translateX(0%)",
+                left: "60%",
+                top: "40%",
+                translateX: "0%",
               }
             : {
-                left: "837px",
-                top: "195px",
-                transform: "translateX(0%)",
+                left: "65%",
+                top: "35%",
+                translateX: "0%",
               };
         }
       case 1:
         if (positions === 0) {
           return isMobile
             ? {
-                left: "0px",
-                top: "57px",
+                left: "5%",
+                top: "20%",
               }
             : {
-                left: "-33px",
-                top: "165px",
+                left: "-2%",
+                top: "20%",
               };
         } else if (positions === 1) {
           return isMobile
             ? {
-                left: "335px",
-                top: "90px",
+                left: "75%",
+                top: "15%",
               }
             : {
-                left: "972px",
-                top: "95px",
+                left: "80%",
+                top: "20%",
               };
         } else {
           return isMobile
             ? {
-                left: "150px",
-                top: "-12px",
-                transform: "translateX(0%)",
+                left: "40%",
+                top: "0%",
               }
             : {
-                left: "448px",
-                top: "-26px",
-                transform: "translateX(0%)",
+                left: "50%",
+                top: "0%",
+
+                translateX: "-50%",
               };
         }
       case 2:
         if (positions === 0) {
           return isMobile
             ? {
-                left: "335px",
-                top: "62px",
+                left: "75%",
+                top: "60%",
               }
             : {
-                left: "986px",
-                top: "180px",
+                left: "75%",
+                top: "70%",
               };
         } else if (positions === 1) {
           return isMobile
             ? {
-                left: "150px",
-                top: "50px",
-                transform: "translateX(0%)",
+                left: "50%",
+                top: "15%",
+                translateX: "-50%",
               }
             : {
-                left: "448px",
-                top: "-45px",
-                transform: "translateX(0%)",
+                left: "50%",
+                top: "10%",
+                translateX: "-50%",
               };
         } else {
           return isMobile
             ? {
-                left: "-14px",
-                top: "107px",
-                transform: "translateX(0%)",
+                left: "0%",
+                top: "70%",
+                translateX: "0%",
               }
             : {
-                left: "-27px",
-                top: "214px",
-                transform: "translateX(0%)",
+                left: "0%",
+                top: "60%",
               };
         }
       default:
@@ -279,7 +282,7 @@ const Cameras = () => {
         <span className="font-normal"> Video & Photography</span>{" "}
         <span className="invisible">i</span> Equipment Rental
       </h1>
-      <div className="w-full min-h-[263.22px] md:min-h-[834px] relative overflow-x-hidden flex flex-col">
+      <div className="w-full h-[263.22px] md:h-[834px] relative overflow-x-hidden flex flex-col">
         <div className="flex justify-center items-center">
           <motion.div
             style={getBoxStyle(0)}
@@ -345,7 +348,7 @@ const Cameras = () => {
             }}
           />
         </div>
-        <div className="text-[7.15px] absolute bottom-[63.45px] md:bottom-[182px] right-[58px] md:right-[190px] md:text-[20.5px] md:leading-[17.43px] leading-[6.08px] flex items-center">
+        <div className="text-[7.15px] absolute bottom-[63.45px] md:bottom-[182px]  right-[5px] md:right-[10px] md:text-[20.5px] md:leading-[17.43px] leading-[6.08px] flex items-center">
           <img
             src="/images/L.png"
             alt="line"
