@@ -49,104 +49,107 @@ const Rental = () => {
         if (positions === 0) {
           return isMobile
             ? {
-                left: "110px",
-                top: "55px",
+                left: "50%",
+                top: "10%",
+                translateX: "-50%",
               }
             : {
-                left: "315px",
-                top: "-42px",
+                left: "50%",
+                top: "0%",
+                translateX: "-50%",
               };
         } else if (positions === 1) {
           return isMobile
             ? {
-                left: "-31.98px",
-                top: "130px",
+                left: "0%",
+                top: "35%",
+                translateX: "0%",
               }
             : {
-                left: "-173px",
-                top: "257px",
+                left: "-10%",
+                top: "40%",
+                translateX: "0%",
               };
         } else {
           return isMobile
             ? {
-                left: "215px",
-                top: "95px",
-                transform: "translateX(0%)",
+                left: "60%",
+                top: "40%",
+                translateX: "0%",
               }
             : {
-                left: "837px",
-                top: "195px",
-                transform: "translateX(0%)",
+                left: "65%",
+                top: "35%",
+                translateX: "0%",
               };
         }
       case 1:
         if (positions === 0) {
           return isMobile
             ? {
-                left: "0px",
-                top: "57px",
+                left: "5%",
+                top: "20%",
               }
             : {
-                left: "-33px",
-                top: "165px",
+                left: "-2%",
+                top: "20%",
               };
         } else if (positions === 1) {
           return isMobile
             ? {
-                left: "335px",
-                top: "90px",
+                left: "80%",
+                top: "15%",
               }
             : {
-                left: "972px",
-                top: "95px",
+                left: "80%",
+                top: "10%",
               };
         } else {
           return isMobile
             ? {
-                left: "150px",
-                top: "-12px",
-                transform: "translateX(0%)",
+                left: "40%",
+                top: "10%",
               }
             : {
-                left: "448px",
-                top: "-26px",
-                transform: "translateX(0%)",
+                left: "50%",
+                top: "0%",
+
+                translateX: "-50%",
               };
         }
       case 2:
         if (positions === 0) {
           return isMobile
             ? {
-                left: "335px",
-                top: "62px",
+                left: "75%",
+                top: "60%",
               }
             : {
-                left: "986px",
-                top: "180px",
+                left: "70%",
+                top: "50%",
               };
         } else if (positions === 1) {
           return isMobile
             ? {
-                left: "150px",
-                top: "50px",
-                transform: "translateX(0%)",
+                left: "50%",
+                top: "15%",
+                translateX: "-50%",
               }
             : {
-                left: "448px",
-                top: "-45px",
-                transform: "translateX(0%)",
+                left: "50%",
+                top: "10%",
+                translateX: "-50%",
               };
         } else {
           return isMobile
             ? {
-                left: "-14px",
-                top: "107px",
-                transform: "translateX(0%)",
+                left: "0%",
+                top: "70%",
+                translateX: "0%",
               }
             : {
-                left: "-27px",
-                top: "214px",
-                transform: "translateX(0%)",
+                left: "0%",
+                top: "60%",
               };
         }
       default:
@@ -161,13 +164,13 @@ const Rental = () => {
     setPositions((prevPosition) => (prevPosition === 2 ? 0 : prevPosition + 1));
   };
   return (
-    <div className="w-full relative pb-0 h-[336px] md:h-fit bg-white">
-      <span className="text-[14px] mb-[49px] md:text-[41px] font-[400] leading-[11.9px] md:leading-[34.85px] mx-auto w-fit mt-[35px] md:mt-[70px] uppercase flex">
+    <div className="w-full relative pb-0 h-fit md:h-fit bg-white">
+      <span className="text-[14px]  md:mb-[49px] md:text-[41px] font-[400] leading-[11.9px] md:leading-[34.85px] mx-auto w-fit mt-[35px] md:mt-[70px] uppercase flex">
         Video & Photography <span className="invisible">i</span>
         <span className="font-black"> Equipment Rental</span>
       </span>
-      <div className="md:h-[755px] min-h-[263.22px] w-[1280px]  relative">
-        <div className="w-full relative h-full flex flex-col">
+      <div className="md:h-[755px] mx-auto  overflow-x-hidden overflow-auto  h-[289px] w-full md:w-[1280px]  relative">
+        <div className="w-full  relative h-full flex flex-col">
           <motion.div
             style={getBoxStyle(0)}
             animate={getBoxStyle(0)}
@@ -207,7 +210,7 @@ const Rental = () => {
               style={getBoxStyle(2)}
               animate={getBoxStyle(2)}
               transition={{ duration: 0.5 }}
-              className="relative w-[139.11px]  h-[133.53px] md:w-[385px] md:h-[385px] object-cover"
+              className="relative w-[139.11px]   h-[133.53px] md:w-[385px] md:h-[385px] object-cover"
             >
               <motion.img
                 key={images[1].id}
@@ -217,7 +220,7 @@ const Rental = () => {
               />
             </motion.div>
           </div>
-          <div className="text-[7.15px] absolute top-[184px] md:top-[528px] left-[21.29px] md:left-[84px] md:text-[20.5px] md:leading-[17.43px] leading-[6.08px] justify-start items-center flex mt-2">
+          <div className="text-[7.15px]  absolute top-[184px]  md:top-[528px] left-[21.29px] md:left-[84px] md:text-[20.5px] md:leading-[17.43px] leading-[6.08px] justify-start items-center flex mt-2">
             <img
               src="/images/L.png"
               alt="line"
@@ -231,11 +234,11 @@ const Rental = () => {
               }}
             />
           </div>
-          <div className="text-[7.15px] absolute bottom-[63.45px] md:bottom-[182px] right-[58px] md:right-[190px] md:text-[20.5px] md:leading-[17.43px] leading-[6.08px] flex items-center">
+          <div className="text-[7.15px]  absolute bottom-[52px] md:bottom-[182px] right-[21px] md:right-[21px] md:text-[20.5px] md:leading-[17.43px] leading-[6.08px] flex items-center">
             <img
               src="/images/L.png"
               alt="line"
-              className="md:w-[53px] w-[18px] h-[33px] md:h-[95px]"
+              className="md:w-[53px]  w-[18px] h-[33px] md:h-[95px]"
             />
             <span
               className=" translate-x-[-10px] md:translate-x-[-37px]"
