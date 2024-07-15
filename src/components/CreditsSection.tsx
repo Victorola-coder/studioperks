@@ -3,7 +3,12 @@ const CreditsSection = () => {
     <div className=" h-fit relative overflow-hidden w-full bg-[#535353] px-[65px] md:px-[82px] py-[23px] md:py-[68px] flex flex-col ">
       <img
         src="/images/bgLarge.svg"
-        className="h-[1183px]  object-contain absolute -top-[250px] left-[685px] w-[1111px]"
+        className="h-[1183px] hidden md:flex bg-white object-contain absolute -top-[250px] left-[685px] w-[1111px]"
+        alt=""
+      />
+      <img
+        src="/images/creditImage.png"
+        className="w-[372.36px] h-[396.49px] object-contain right-[-20%] top-[-10%] absolute "
         alt=""
       />
       <h1
