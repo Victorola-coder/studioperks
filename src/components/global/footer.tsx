@@ -51,7 +51,7 @@ export default function Footer() {
             <div className="font-aeonik font-normal leading-[18.24px] text-[#D9D9D9] mt-[14px] flex flex-col gap-[10px]">
               <p>Orchid Rd, Lekki Lagos Nigeria</p>
               <p>Tel. +234800000000, +23480000000</p>
-              <p>Email. info@studioperks.com</p>
+              <p>Email. info@studioperks.org</p>
             </div>
           </div>
           <div>
