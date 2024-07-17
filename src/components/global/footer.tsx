@@ -46,7 +46,7 @@ export default function Footer() {
         <div className="flex flex-col gap-[46px]  md:flex md:flex-row md:justify-between">
           <div>
             <h4 className="text-[18px] font-medium leading-[23.81px] font-red">
-              StudioPerks
+              StudioPerks.org
             </h4>
             <div className="font-aeonik font-normal leading-[18.24px] text-[#D9D9D9] mt-[14px] flex flex-col gap-[10px]">
               <p>Orchid Rd, Lekki Lagos Nigeria</p>
